@@ -198,13 +198,11 @@ header .mobile {
 }
 
 #information .side article img.desktop {
-  display: inline-block;
   width: 35%;
   height: auto;
 }
 
 #information .side article .text_container {
-  display: inline-block;
   padding: 1rem;
   margin: auto 0;
 }
@@ -314,18 +312,72 @@ header .mobile {
   }
 }
 
+
 /* MAIN - THESIS */
-#thesis {
-  padding: 2rem 1.5rem;
+
+#thesis .grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
 }
 
 #thesis h1 {
   text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+#thesis .main {
+  grid-column-start: 1;
+  padding: 2rem 1.5rem;
+}
+
+#thesis .main video {
+  width: 100%;
+}
+
+#thesis .side {
+  grid-column-start: 2;
+}
+
+#thesis .side article {
+  display: flex;
+  padding: 1rem;
+}
+
+#thesis .side article img {
+  width: 35%;
+  height: auto;
+}
+
+#thesis .side article .text_container {
+  padding: 1rem;
+  margin: auto 0;
+}
+
+@media only screen and (max-width: 760px) {
+  #thesis .desktop {
+    display: none;
+  }
+  #thesis .grid {
+    display: block;
+  }
 }
 
 
 /* FOOTER */
+footer {
+  border-top: 1px solid #ccc;
+  padding: 1rem 1.5rem 3rem 1.5rem;
+  display: flex;
+}
 
+footer .left {
+  flex-grow: 1;
+}
+
+footer .right p {
+  display: inline-block;
+  padding-left: 1rem;
+}
 
 
 /* ANIMATIONS */
@@ -335,6 +387,9 @@ header .mobile {
   transition-timing-function: ease-in-out;
 }
 #information .side article:hover {
+  background-color: #ccc;
+}
+#thesis .side article:hover {
   background-color: #ccc;
 }
 #course article:hover {
