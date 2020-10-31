@@ -129,12 +129,13 @@ header .mobile {
 
 #cta .image_container {
   width: 60%;
+  max-width: 1104px;
 }
 
 #cta .text_container {
   margin: auto;
   width: 30%;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 #cta .button {
@@ -185,7 +186,11 @@ header .mobile {
 
 #learning {
   background-color: #ccc;
-  padding: 2rem 4.5rem;
+  padding: 2rem 4.5rem 0 4.5rem;
+}
+
+#learning h1 {
+  text-align: center;
 }
 
 #learning h4 {
@@ -194,14 +199,12 @@ header .mobile {
 
 #learning .subject_container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   margin-left: -2rem;
-  margin-bottom: -2rem;
 }
 
 #learning .subject {
-  width: 30%;
   margin: 0 0 2rem 2rem;
   background-color: white;
 }
@@ -221,7 +224,7 @@ header .mobile {
   }
   #learning {
     background-color: white;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 1.5rem 1rem;
   }
   #learning h4 {
     margin: 0;
@@ -229,10 +232,10 @@ header .mobile {
   #learning .subject_container {
     flex-flow: column wrap;
     margin: 0;
-    margin-bottom: -0.5rem;
   }
   #learning .subject {
-    width: 100%;
+    width: 100;
+    max-width: none;
     margin: 0 0 0.5rem 0;
     background-color: #ccc;
     border-radius: 0.2rem;
