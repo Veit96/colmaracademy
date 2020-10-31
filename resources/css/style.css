@@ -42,7 +42,7 @@ h1, h2, h3, h4, a {
 }
 
 p {
-  color: #ccc;
+  color: #444;
   font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.5;
@@ -177,44 +177,113 @@ header .mobile {
 
 /* MAIN - OVERVIEW */
 
-#overview {
-  height: 40rem;
+#information {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+#information .main {
+  grid-column-start: 1;
+  padding: 2rem 1.5rem;
+}
+
+#information .side {
+  grid-column-start: 2;
+  display: inline-block;
+}
+
+#information .side article {
+  display: flex;
+  padding: 1rem;
+}
+
+#information .side article img.desktop {
+  display: inline-block;
+  width: 35%;
+  height: auto;
+}
+
+#information .side article .text_container {
+  display: inline-block;
+  padding: 1rem;
+  margin: auto 0;
+}
+
+#information a {
+  color: cornflowerblue;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  #information {
+    display: block;
+  }
+
+  #information .side {
+    display: block;
+  }
+
+  #information .side article {
+    display: block;
+  }
+
+  #information .side article img.mobile {
+    display: block;
+  }
+
+  #information .side article img.desktop {
+    display: none;
+  }
+
+  #information .side article .text_container {
+    display: block;
+    padding: 1rem;
+    margin: auto;
+  }
+  #information {
+    display: block;
+  }
+
+
 }
 
 
 /* MAIN - LEARNING */
 
-#learning {
+#course {
   background-color: #ccc;
   padding: 2rem 4.5rem 0 4.5rem;
 }
 
-#learning h1 {
+#course h1 {
   text-align: center;
 }
 
-#learning h4 {
+#course h4 {
   margin-bottom: 1rem;
 }
 
-#learning .subject_container {
+#course .course_container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   margin-left: -2rem;
 }
 
-#learning .subject {
+#course .course {
   margin: 0 0 2rem 2rem;
   background-color: white;
 }
 
-#learning .subject img {
+#course .course img {
   width: 100%;
   height: auto;
 }
 
-#learning .text_container {
+#course .text_container {
   padding: 1rem 1rem 1.5rem 1rem;
 }
 
@@ -222,29 +291,52 @@ header .mobile {
   .desktop {
     display: none;
   }
-  #learning {
+  #course {
     background-color: white;
     padding: 2rem 1rem 1.5rem 1rem;
   }
-  #learning h4 {
+  #course h4 {
     margin: 0;
   }
-  #learning .subject_container {
+  #course .course_container {
     flex-flow: column wrap;
     margin: 0;
   }
-  #learning .subject {
+  #course .course {
     width: 100;
     max-width: none;
     margin: 0 0 0.5rem 0;
     background-color: #ccc;
     border-radius: 0.2rem;
   }
-  #learning .text_container {
+  #course .text_container {
     padding: 1rem;
   }
 }
 
 /* MAIN - THESIS */
+#thesis {
+  padding: 2rem 1.5rem;
+}
+
+#thesis h1 {
+  text-align: center;
+}
+
 
 /* FOOTER */
+
+
+
+/* ANIMATIONS */
+:hover {
+  transition-delay: 0.05s;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+}
+#information .side article:hover {
+  background-color: #ccc;
+}
+#course article:hover {
+  box-shadow:  0.2rem 0.1rem 0.8rem 0.15rem #444;
+}
